@@ -1,0 +1,24 @@
+components:
+- name: github.com/sidhishruti22/icapp
+  version: "v1.0.0"
+  provider:
+    name: sidhishruti22
+  resources:
+    - name: deployment
+      type: Directory
+      input:
+        type: dir
+        path: "manifests"
+        compress: true
+    - name: config
+      type: PlainText
+      input:
+        type: file
+        path: "config.yaml"
+        compress: true
+    - name: image
+      type: ociImage
+      version: "v6.2.0"
+      access:
+        type: ociArtifact
+        imageReference: incidents-mgmt-dev.int.repositories.cloud.sap/incident-mgmt:0.0.0

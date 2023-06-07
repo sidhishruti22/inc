@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: icapp
+  namespace: default
+  labels:
+    app: icapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: icapp
+  template:
+    metadata:
+      labels:
+        app: icapp
+    spec:
+      containers:
+      - image: noimage:v0.0.0 # we'll use localization later to correctly specify the image
+        name: icapp
+        ports:
+        - containerPort: 9898
+          name: http
