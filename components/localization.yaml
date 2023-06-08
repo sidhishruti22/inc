@@ -1,0 +1,22 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: Localization
+metadata:
+  name: icapp
+  namespace: ocm-system
+spec:
+  interval: 1m0s
+  componentVersionRef:
+    name: icapp
+    namespace: ocm-system
+  source:
+    sourceRef:
+      kind: Snapshot
+      name: icapp-deployment
+      namespace: ocm-system
+  configRef:
+    resource:
+      resourceRef:
+        name: config
+  snapshotTemplate:
+    name: icapp-deployment-localized
+    createFluxSource: true
