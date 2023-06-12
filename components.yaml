@@ -1,6 +1,6 @@
 components:
 - name: github.com/sidhishruti22/icapp
-  version: "v1.0.3"
+  version: "v1.0.5"
   provider:
     name: sidhishruti22
   resources:
