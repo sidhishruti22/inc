@@ -16,7 +16,7 @@ spec:
         app: icapp
     spec:
       containers:
-      - image: noimage:v0.0.0 # we'll use localization later to correctly specify the image
+      - image: noimage:v0.0.0
         name: icapp
         ports:
         - containerPort: 9898
